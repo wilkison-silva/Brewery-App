@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@color/teal_700"
+    android:elevation="25dp"
+    app:cardCornerRadius="50dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/initial_letter_brewery_search_recycler_view_item"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_textview"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            android:text="@string/a"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:textColor="@color/yellow_rating"
+            android:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_brewery_search_recycler_view_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/brewery_black"
+            android:textSize="16sp"
+            android:lines="1"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/rate_brewery_search_recycler_view_item"
+            app:layout_constraintStart_toEndOf="@+id/initial_letter_brewery_search_recycler_view_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Cervejaria A" />
+
+        <TextView
+            android:id="@+id/rate_brewery_search_recycler_view_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/brewery_black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/rating_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4,9" />
+
+        <RatingBar
+            android:id="@+id/rating_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:stepSize="1"
+            android:progressTint="@color/yellow_rating"
+            android:progressBackgroundTint="@color/yellow_rating"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

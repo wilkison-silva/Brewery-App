@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clBreweryDetails">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbDetails"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/yellow_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_color_back"
+            android:background="@color/yellow_icon"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/ibLikeDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart"
+            android:layout_gravity="end"
+            android:background="@color/yellow_icon"
+            android:layout_marginEnd="16dp"
+            tools:ignore="ContentDescription"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clBreweryDetailsImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBorderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            />
+
+        <TextView
+            android:id="@+id/tvBreweryDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/detalhes_da_cervejaria"
+            android:textColor="@color/brewery_black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBreweryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginHorizontal="16dp"
+        android:elevation="25dp"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbDetails" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clCardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvLetterBreweryDetails"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_textview"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/a"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:textColor="#FFDD4B"
+                android:textStyle="bold"
+                android:textFontWeight="600"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tvNameBreweryDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/brewery_black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvSizeEvalutionsDetails"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLetterBreweryDetails"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Cervejaria A"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:id="@+id/tvBreweryTypeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/brewery_black"
+                app:layout_constraintStart_toEndOf="@+id/tvLetterBreweryDetails"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameBreweryDetails"
+                tools:text="Bar" />
+
+            <TextView
+                android:id="@+id/tvAvaliationDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/brewery_black_light"
+                android:text="@string/avaliacoes"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSizeEvalutionsDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/roboto"
+                android:textSize="14sp"
+                android:textColor="@color/brewery_black_light"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAvaliationDetails"
+                app:layout_constraintEnd_toStartOf="@+id/tvAvaliationDetails"
+                app:layout_constraintTop_toTopOf="@+id/tvAvaliationDetails"
+                tools:text="+500" />
+
+            <RatingBar
+                android:id="@+id/ratingBarDetails"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="13dp"
+                android:progressTint="@color/yellow_rating"
+                android:progressBackgroundTint="@color/yellow_rating"
+                android:rating="1"
+                android:stepSize="1"
+                app:layout_constraintEnd_toEndOf="@+id/tvAvaliationDetails"
+                app:layout_constraintStart_toStartOf="@+id/tvAvaliationDetails"
+                app:layout_constraintTop_toBottomOf="@+id/tvAvaliationDetails" />
+
+            <TextView
+                android:id="@+id/tvAverageDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBarDetails"
+                app:layout_constraintEnd_toStartOf="@+id/ratingBarDetails"
+                app:layout_constraintTop_toBottomOf="@+id/tvSizeEvalutionsDetails"
+                tools:text="4,9" />
+
+            <ImageView
+                android:id="@+id/ivIconWorld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_language"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLetterBreweryDetails"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:id="@+id/tvWebSite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/brewery_black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivIconWorld"
+                app:layout_constraintStart_toEndOf="@+id/ivIconWorld"
+                app:layout_constraintTop_toTopOf="@+id/ivIconWorld"
+                tools:text="www.cervejaria.com.br" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/mdWorld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:dividerInsetEnd="16dp"
+                app:dividerInsetStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivIconWorld" />
+
+            <ImageView
+                android:id="@+id/ivPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_place"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdWorld"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:id="@+id/tvAddressDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginHorizontal="19dp"
+                android:maxLines="2"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@color/brewery_black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mdPlace"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/ivPlace"
+                app:layout_constraintTop_toTopOf="@+id/ivPlace"
+                tools:text="7292 Opportunity Rd Ste C kkkkkkkk kkkkkkkkkkkkkk kkkkkkkkkk kkkring" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/mdPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:dividerInsetEnd="16dp"
+                app:dividerInsetStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivPlace" />
+
+            <ImageView
+                android:id="@+id/ivMapDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_map"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdPlace"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:id="@+id/tvMapDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@string/ver_no_mapa"
+                android:textColor="@color/brewery_black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivMapDetails"
+                app:layout_constraintStart_toEndOf="@+id/ivMapDetails"
+                app:layout_constraintTop_toTopOf="@+id/ivMapDetails" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:id="@+id/materialDividerMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:dividerInsetEnd="16dp"
+                app:dividerInsetStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMapDetails" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/image_recycleview"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mdPlace"
+                app:layout_constraintVertical_bias="0.35"
+                tools:listitem="@layout/item_image_brewery" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbAddPhoto"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                app:cornerRadius="30dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/adicionar_foto"
+                android:textColor="@color/brewery_black"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.02dp"
+                app:icon="@drawable/ic_image"
+                app:iconTint="@color/black"
+                app:iconGravity="textStart"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image_recycleview" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mbAvaliation"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/yellow_rating"
+                android:layout_marginTop="8dp"
+                android:text="@string/avaliar"
+                android:textColor="@color/gold"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="14sp"
+                app:cornerRadius="30dp"
+                app:iconGravity="textStart"
+                app:icon="@drawable/ic_color_star"
+                app:iconTint="@color/gold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mbAddPhoto" />
+
+            <ImageView
+                android:id="@+id/iv_refresh_screen"
+                android:layout_width="56dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/ic_image_rating_success"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mbAddPhoto"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:id="@+id/tv_success_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="@string/already_evaluated"
+                android:textColor="@color/success_green"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toEndOf="@+id/iv_refresh_screen"
+                app:layout_constraintTop_toBottomOf="@id/mbAddPhoto" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="InputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColorHint">@color/brewery_black</item>
+        <item name="android:textColor">@color/brewery_black</item>
+        <item name="android:textSize">@dimen/eighteen</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/thirty_two</item>
+        <item name="boxBackgroundColor">@color/yellow_light</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/thirty_two</item>
+        <item name="boxCornerRadiusTopStart">@dimen/thirty_two</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/thirty_two</item>
+        <item name="boxStrokeColor">#00000000</item>
+    </style>
+
+    <style name="TextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">@dimen/fourteen</item>
+        <item name="color">@color/yellow_light</item>
+        <item name="android:paddingStart">@dimen/fifty</item>
+        <item name="android:paddingEnd">@dimen/thirty_two</item>
+
+        <item name="android:textColor">@color/brewery_black</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+    <style name="BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="roundedImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+</resources>
